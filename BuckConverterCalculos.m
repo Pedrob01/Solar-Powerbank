@@ -1,0 +1,11 @@
+P=5; % Pv power
+Vin=17.5; % V at MPP
+fs=1000;
+Vout=5; % Buck converter Vin IM130710003
+Ioutmax=P/Vout;
+Iripp=Ioutmax*0.05;
+Vripp=Vout*0.005;
+L=(Vout* (Vin-Vout))/ (Iripp*fs *Vin)
+C=(Iripp)/(8*fs*Vripp)
+Ts_control=100e-6
+Ts=1e-6
